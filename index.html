@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-edit">
+         <div class="card border-0" style="width: 50rem;" >
+            <h4 class="fas fa-wallet text-right text-success"><span class="notification-count">R$0,00</span></h4>
+            <header>Faça parte da comunidade!</header>
+            <div class="progress-bar-edit">
+                <div class="step">
+                <p>
+                    Dados
+                </p>
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                <p>
+                    Convite
+                </p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                <p>
+                    Saldo
+                </p>
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                <p>
+                    Enviar
+                </p>
+                <div class="bullet">
+                    <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+                </div>
+            </div>
+            <!-- start form -->
+                <div class="form-outer">
+                    <form action="#">
+                    <div class="page slide-page">
+                        <div class="title mb-1">
+                            <p>Cadastre-se agora para desfrutar de todos os benefícios exclusivos!<br>
+                                <span class="neonText">Continue para ganhar seus R$5,00! 🤑</span></p>
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                                Nome
+                            </div>
+                            <input type="text">
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                                Sobrenome
+                            </div>
+                            <input type="text">
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                                Email
+                            </div>
+                            <input type="email">
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                                Senha
+                            </div>
+                            <input type="password" id="senha" name="senha">
+                            <input type="button" id="mostrarBtn" style="width: 40px; background-color: white; border: none;" value="👁‍🗨">
+                        </div>
+                        <div class="field">
+                            <button class="firstNext next">Próximo → </button>
+                        </div>
+                    </div>
+                    <div class="page justify-content-around">
+                        <div class="title mb-1">
+                            <p> <span class="neonText">Convide seus amigos para continuar 🤑</span></p>
+                            <div class="field ">
+                                <p>Convidando amigos você ganha mais pontos!</p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button class="inviteButton invite-animation" data-toggle="modal" data-target="#bonusModal">
+                                <a class="text-white link_remove" href="https://google.com" target="_blank" onclick="adicionarSaldo()">
+                                Convidar
+                                </a>
+                            </button>
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-1 prev">Voltar</button>
+                            <button class="next-1 next">Próximo</button>
+                        </div>
+                    </div>
+                    <div class="page justify-content-around">
+                        <div class="title">
+                            Adicione o saldo a sua conta 💰
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                            <b>SALDO A SER RESGATADO</b>
+                            </div>
+                            <input type="text" value=" R$ 5,00 " readonly>
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                                insira sua chave PIX
+                            </div>
+                            <input type="text" maxlength="32">
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-2 prev">Voltar</button>
+                            <button class="next-2 next range_button" onclick="Range_Valor()">Próximo</button>
+                        </div>
+                    </div>
+                    <div class="page justify-content-around">
+                        <div class="title">
+                            Você tem a possibilidade de conseguir <span id="valor_Range">R$0</span> <br> continuando com os objetivos dentro da plataforma!
+                        </div>
+                        <div class="field">
+                            
+                            <button><a class="text-white" href="https://www.google.com" target="_blank"> Acessar Plataforma</a></button>
+                        </div>
+                        <div class="title">
+                        <p> Após acessar a plataforma <br> adicione o comprovante aqui  👇😎</p>
+                        </div>
+                        <div class="field">
+                            <label class="btns alter" for="customFile">Enviar arquivo</label>
+                            <input class="custom-file-edit" type="file" name="arquivo" id="customFile">
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-3 prev">Voltar</button>
+                            <button class="submit">Entrar</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            <!-- end form -->
+         </div>
+    </div>
+
+    <!-- START MODAL -->
+    <div class="modal fade" id="bonusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">✨PARABENS✨</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+             VOCE GANHOU R$5,00 E O VALOR JÁ ESTÁ NA SUA CARTEIRA 🎊🥳
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="continueSignIn()">CONTINUE</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

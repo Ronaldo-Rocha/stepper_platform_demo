@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+  background-size: 600% 100%;
+}
+@keyframes gradient {
+  0% {background-position: 0%}
+  100% {background-position: 100%}
+}
+::selection{
+  color: #fff;
+  background: #3fd346;
+}
+.container-edit{
+  /* width: 330px; */
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+}
+.container-edit header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container-edit .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container-edit .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form-outer form .page .title{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 25px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #3fd346;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #073709;
+}
+form .page .btns button{
+  margin-top: -20px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+}
+.container-edit .progress-bar-edit{
+  display: flex;
+  flex-direction: row; /*rr*/
+  justify-content: center; /*rr*/
+  margin: 40px 0;
+  user-select: none;
+}
+.container-edit .progress-bar-edit .step{
+  text-align: center;
+  width: 5rem; /*rr*/
+  position: relative;
+}
+.container-edit .progress-bar-edit .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar-edit .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar-edit .step .bullet.active{
+  border-color: #3fd346;
+  background: #3fd346;
+}
+.progress-bar-edit .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar-edit .step .bullet.active span{
+  display: none;
+}
+.progress-bar-edit .step .bullet:before,
+.progress-bar-edit .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 9px; /*rr*/
+  right: -51px; /*rr*/
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.progress-bar-edit .step .bullet.active:after{
+  background: #3fd346;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar-edit .step:last-child .bullet:before,
+.progress-bar-edit .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar-edit .step p.active{
+  color: #3fd346;
+  transition: 0.2s linear;
+}
+.progress-bar-edit .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar-edit .step .check.active{
+  display: flex;
+  color: #fff;
+}
+
+/**/
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Escolher';
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.custom-file-input:hover::before {
+  background: #0069d9;
+}
+.custom-file-input:active::before {
+  background: #0062cc;
+}
+.custom-file-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.custom-file-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* formatação input file*/
+input[type="file"] {
+  display: none;
+}
+label{
+  padding: 20px 10px;
+  width: 200px;
+  height: 50px;
+  background:#3fd346 ;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  margin: 0px 0 60px 60px;
+  padding: 12px;
+  font-family:'Poppins', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 5px;
+}
+label:hover{
+  color: white;
+  font-weight: 400;
+  background: #073709;
+}
+
+/* estilização Carteira*/
+.notification-count {
+  position: absolute;
+  top: -7px;
+  right: -25px;
+  transform: rotate(10deg);
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 60px;
+  /* height: 60px; */
+  line-height: 16px;
+  text-align: center;
+  border-radius: 10px;
+  animation: swing 2s infinite;
+  }
+  .fa-wallet{
+  position: absolute;
+  font-size: 40px;
+  top:-5px;
+  right: -2px;
+
+  }
+
+/*animação de saldo*/
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* texto chamativo em neon */
+.neonText {
+  color: #3fd346;
+  text-shadow:
+    0 0 4px #000,
+    0 0 6px #000,
+    0 0 8px #000,
+    0 0 10px #fa0303,
+    0 0 12px #fa0303,
+    0 0 14px #fa0303,
+    0 0 16px #fa0303,
+    0 0 18px #fa0303;
+    font-weight: 400;
+    animation: pulsate 0.11s ease-in-out infinite alternate;  
+    line-height: 4;
+}
+
+@keyframes pulsate {
+    
+  100% {
+
+      text-shadow:
+      0 0 2px #000,
+      0 0 4px #000,
+      0 0 6px #000,
+      0 0 8px #fa0303,
+      0 0 10px #fa0303,
+      0 0 12px #fa0303,
+      0 0 14px #fa0303,
+      0 0 16px #fa0303;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 4px #000,
+      0 0 8px #000,
+      0 0 12px #000,
+      0 0 16px #fa0303,
+      0 0 20px #fa0303,
+      0 0 24px #fa0303,
+      0 0 28px #fa0303,
+      0 0 32px #fa0303;
+
+  }
+}
+
+/* animação botao de convidar*/
+.invite-animation{
+  animation: swing2 4s infinite ;
+}
+@keyframes swing2 {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+
+}
