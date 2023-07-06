@@ -10,7 +10,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
@@ -25,11 +25,11 @@ body{
   background: #3fd346;
 }
 .container-edit{
-  /* width: 330px; */
+  /* width: 50%; */
   background: #fff;
   text-align: center;
   border-radius: 5px;
-  padding: 50px 35px 10px 35px;
+  padding: 18px 10px 0px 0px;
 }
 .container-edit header{
   font-size: 35px;
@@ -225,7 +225,7 @@ form .page .btns button.next{
   white-space: nowrap;
 }
 
-/* formatação input file*/
+/* STYLE INPUT FILE*/
 input[type="file"] {
   display: none;
 }
@@ -251,7 +251,7 @@ label:hover{
   background: #073709;
 }
 
-/* estilização Carteira*/
+/* WALLET STYLE*/
 .notification-count {
   position: absolute;
   top: -7px;
@@ -270,10 +270,18 @@ label:hover{
   .fa-wallet{
   position: absolute;
   font-size: 40px;
-  top:-5px;
-  right: -2px;
-
+  top: 10px;
+  right: 10px
   }
+  .fa-twitter, .fa-whatsapp, .fa-facebook{
+    font-size: 50px;
+  }
+
+/*GAP SOCIAL ICONS*/
+.gap_ul{
+  display: flex;
+  gap: 50px;
+}
 
 /*animação de saldo*/
 @keyframes swing {
@@ -297,6 +305,7 @@ label:hover{
     font-weight: 400;
     animation: pulsate 0.11s ease-in-out infinite alternate;  
     line-height: 4;
+    font-size: 1rem;
 }
 
 @keyframes pulsate {

@@ -96,20 +96,44 @@ mostrarBtn.addEventListener("click", mostrarSenha);
 // alterar valor de saldo na carteira
 function adicionarSaldo(){
   const notificationCountElement = document.querySelector('.notification-count');
-  notificationCountElement.style.background = "green"
-  const notificationCount = `R$5,00`; // Número de notificações (pode ser qualquer valor)
-  notificationCountElement.textContent = notificationCount;
+  if (notificationCountElement.textContent == `R$5,00`) {
+      const warningMessage = document.querySelector('.modal-message')
+      warningMessage.innerHTML = " ❌ voce ja recebeu os 5 reais 😎"
+
+  }else{
+    notificationCountElement.style.background = "green"
+    const notificationCount = `R$5,00`; // Número de notificações (pode ser qualquer valor)
+    notificationCountElement.textContent = notificationCount;
+  }
+
+ 
 }
 
 //desabilitar botao de convite e link de compartilhamento
 function continueSignIn(){
-  const invite_Button = document.querySelector('.inviteButton')
-  invite_Button.classList.remove("invite-animation")
-  invite_Button.classList.add("bg-secondary")
-  invite_Button.disabled = true;
+  // const invite_Button = document.querySelector('.inviteButton')
+  // const button_social1 = document.querySelector('.buttonSocial1')
+  // const button_social2 = document.querySelector('.buttonSocial2')
+  // const button_social3 = document.querySelector('.buttonSocial3')
 
-  const anchorRemove = document.querySelector('.link_remove')
-  anchorRemove.removeAttribute("href");
+  // const iconSocial1 = document.querySelector('.sociIcons1')
+  // const iconSocial2 = document.querySelector('.sociIcons2')
+  // const iconSocial3 = document.querySelector('.sociIcons3')
+
+  // iconSocial1.classList.add("text-secondary")
+  // iconSocial2.classList.remove("text-success")
+  // iconSocial2.classList.add("text-secondary")
+  // iconSocial3.classList.add("text-secondary")
+  
+
+  // invite_Button.classList.remove("invite-animation")
+  // invite_Button.classList.add("bg-transparent")
+  // button_social1.disabled = true;
+  // button_social2.disabled = true;
+  // button_social3.disabled = true;
+
+  // const anchorRemove = document.querySelector('.link_remove')
+  // anchorRemove.removeAttribute("href");
 }
 
 // gerar valor entre 400 e 500
@@ -121,5 +145,30 @@ function Range_Valor(){
   var resultado = document.getElementById("valor_Range");
   resultado.innerHTML = "R$" + valorAleatorio + ",00";
 
+}
+
+// SHARE SOCIAL MEDIA BUTTONS
+function shareFacebook() {
+  // Substitua "URL_PARA_COMPARTILHAR" pela URL que deseja compartilhar
+  var url = "URL_PARA_COMPARTILHAR";
+  var encodedUrl = encodeURIComponent(url);
+  window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodedUrl, "_blank");
+  adicionarSaldo();
+}
+
+function shareWhatsApp() {
+  // Substitua "TEXTO_PARA_COMPARTILHAR" pela mensagem que deseja compartilhar
+  var text = "TEXTO_PARA_COMPARTILHAR";
+  var encodedText = encodeURIComponent(text);
+  window.open("https://api.whatsapp.com/send?text=" + encodedText, "_blank");
+  adicionarSaldo();
+}
+
+function shareTwitter() {
+  // Substitua "TEXTO_PARA_COMPARTILHAR" pela mensagem que deseja compartilhar
+  var text = "TEXTO_PARA_COMPARTILHAR";
+  var encodedText = encodeURIComponent(text);
+  window.open("https://twitter.com/intent/tweet?text=" + encodedText, "_blank");
+  adicionarSaldo();
 }
 
