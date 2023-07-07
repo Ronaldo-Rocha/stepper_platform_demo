@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   body{
     background: red;
   }
