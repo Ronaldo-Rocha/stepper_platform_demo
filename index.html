@@ -10,10 +10,10 @@
 </head>
 <body>
 
-    <div class="container-fluid">
-        <div class="col-md-12" style="padding-left: 4vw;padding-right: 4vw;">
-            <div class="container-edit my-2" >
-                <div class="card border-0" >
+    <div class="container-fluid  ">
+        <div class="col-md-12 ">
+            <div class="container-edit my-2 " >
+                <div class="card border-0 " >
                         <h4 class="fas fa-wallet text-right text-success"><span class="notification-count">R$0,00</span></h4>
                    <div class="mt-4">
                     <header>Faça parte da comunidade!</header>
@@ -68,29 +68,29 @@
                                    <div class="label">
                                        Nome
                                    </div>
-                                   <input class="form-control" type="text">
+                                   <input class="form-control" placeholder="obrigatório" type="text" required>
                                </div>
                                <div class="field">
                                    <div class="label">
                                        Sobrenome
                                    </div>
-                                   <input class="form-control" type="text">
+                                   <input class="form-control" type="text" placeholder="obrigatório" required>
                                </div>
                                <div class="field">
                                    <div class="label">
                                        Email
                                    </div>
-                                   <input class="form-control" type="email">
+                                   <input class="form-control" type="email" placeholder="obrigatório" required>
                                </div>
                                <div class="field">
                                    <div class="label">
                                        Senha
                                    </div>
-                                   <input class="form-control" type="password" id="senha" name="senha">
+                                   <input class="form-control" type="password" id="senha" name="senha" placeholder="obrigatório" required>
                                    <input class="form-control" type="button" id="mostrarBtn" style="width: 40px; background-color: white; border: none;" value="👁‍🗨">
                                </div>
                                <div class="field">
-                                   <button class="firstNext next">Próximo → </button>
+                                   <button type="button" class="firstNext next">Próximo → </button>
                                </div>
                            </div>
                            <div class="page justify-content-around">
@@ -110,18 +110,18 @@
                                    
                                     <ul class="list-inline inviteButton invite-animation gap_ul">
                                         <li class="list-inline-item">
-                                            <button class="bg-transparent buttonSocial1" onclick="shareFacebook()" data-toggle="modal" data-target="#bonusModal">
+                                            <button type="button" class="bg-transparent buttonSocial1" onclick="shareFacebook()" data-toggle="modal" data-target="#bonusModal">
                                                 <i class="fab fa-facebook text-primary sociIcons1"></i>
                                             </button>
                                         </li>
                                         <li class="list-inline-item">
-                                            <button class="bg-transparent buttonSocial2" onclick="shareWhatsApp()"
+                                            <button type="button" class="bg-transparent buttonSocial2" onclick="shareWhatsApp()"
                                             data-toggle="modal" data-target="#bonusModal">
                                                 <i class="fab fa-whatsapp text-success sociIcons2" ></i>
                                             </button>
                                         </li>
                                         <li class="list-inline-item">
-                                            <button class="bg-transparent buttonSocial3" onclick="shareTwitter()"
+                                            <button type="button" class="bg-transparent buttonSocial3" onclick="shareTwitter()"
                                             data-toggle="modal" data-target="#bonusModal">
                                                 <i class="fab fa-twitter text-primary sociIcons3" ></i>
                                             </button>
@@ -130,8 +130,8 @@
                                    
                                </div>
                                <div class="field btns">
-                                   <button class="prev-1 prev">Voltar</button>
-                                   <button class="next-1 next">Próximo</button>
+                                   <button type="button" class="prev-1 prev">Voltar</button>
+                                   <button type="button" class="next-1 next">Próximo</button>
                                </div>
                            </div>
                            <div class="page justify-content-around">
@@ -151,8 +151,8 @@
                                    <input class="form-control" type="text" maxlength="32">
                                </div>
                                <div class="field btns">
-                                   <button class="prev-2 prev">Voltar</button>
-                                   <button class="next-2 next range_button" onclick="Range_Valor()">Próximo</button>
+                                   <button type="button" class="prev-2 prev">Voltar</button>
+                                   <button type="button" class="next-2 next range_button" onclick="Range_Valor()">Próximo</button>
                                </div>
                            </div>
                            <div class="page justify-content-around">
@@ -172,8 +172,8 @@
                                    <input class="custom-file-edit" type="file" name="arquivo" id="customFile">
                                </div>
                                <div class="field btns">
-                                   <button class="prev-3 prev">Voltar</button>
-                                   <button class="submit">Entrar</button>
+                                   <button type="button" class="prev-3 prev">Voltar</button>
+                                   <button type="button" class="submit">Entrar</button>
                                </div>
                            </div>
                            </form>

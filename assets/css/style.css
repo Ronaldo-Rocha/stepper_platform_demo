@@ -7,9 +7,9 @@
 }
 
 @media (max-width: 425px) {
-  body{
+  /* body{
     background: red;
-  }
+  } */
   .progress-bar-edit .step .bullet:after{
   position: absolute;
   content: '';
@@ -45,18 +45,18 @@
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
-  body{
+  /* body{
     background: green;
-  }
+  } */
   .fa-wallet{
     top: 100px !important;
     left: 450px !important;
   }
 }
 @media (max-width: 768px) and (min-width: 426px){
-  body{
+  /* body{
     background: blue;
-  }
+  } */
   .fa-wallet{
     top: 100px !important;
     left: 320px !important;
@@ -69,7 +69,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   overflow: auto;
-  /* background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706); */
+  background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
   background-size: 600% 100%;
@@ -134,6 +134,8 @@ form .page .field .label{
   padding-left: 15px;
   font-size: 18px;
 } */
+
+
 form .page .field select{
   width: 100%;
   padding-left: 10px;
