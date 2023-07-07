@@ -5,13 +5,41 @@
   outline: none;
   font-family: 'Poppins', sans-serif;
 }
+
+@media (max-width: 375px) {
+  body{
+    background: red;
+  }
+  .progress-bar-edit .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 9px; /*rr*/
+  right: -40px; /*rr*/
+  height: 3px;
+  width: 38px;
+  background: #262626;
+  }
+  .container-fluid{
+    width: 115% !important;
+  }
+  form .page .field .label{
+    
+    left: 22px;
+    
+  }
+  .form-outer form .page .field{
+    width: 290px !important;
+
+  }
+}
+
 body{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   /* overflow: hidden; */
-  background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+  /* background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706); */
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
   background-size: 600% 100%;
@@ -68,14 +96,14 @@ form .page .field .label{
   top: -30px;
   font-weight: 500;
 }
-form .page .field input{
+/* form .page .field input{
   height: 100%;
   width: 100%;
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding-left: 15px;
   font-size: 18px;
-}
+} */
 form .page .field select{
   width: 100%;
   padding-left: 10px;
@@ -195,7 +223,7 @@ form .page .btns button.next{
 }
 
 /**/
-.custom-file-input::-webkit-file-upload-button {
+/* .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
 }
 .custom-file-input::before {
@@ -223,7 +251,7 @@ form .page .btns button.next{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+} */
 
 /* STYLE INPUT FILE*/
 input[type="file"] {
