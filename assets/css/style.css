@@ -19,17 +19,47 @@
   width: 38px;
   background: #262626;
   }
-  .container-fluid{
-    width: 115% !important;
+  .container-fluid, .col-md-12, .container-edit{
+    /* width: 115% !important; */
+    padding: 0 !important;
   }
   form .page .field .label{
     
-    left: 22px;
+    left: 4px;
     
   }
   .form-outer form .page .field{
     width: 290px !important;
 
+  }
+  .fa-wallet{
+    top: 150px !important;
+    left: 180px !important;
+  }
+  .notification-count{
+    top: -7px;
+    right: -16px !important;
+    font-size: 10px;
+    width: 44px !important;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  body{
+    background: green;
+  }
+  .fa-wallet{
+    top: 100px !important;
+    left: 450px !important;
+  }
+}
+@media (max-width: 768px) and (min-width: 426px){
+  body{
+    background: blue;
+  }
+  .fa-wallet{
+    top: 100px !important;
+    left: 320px !important;
   }
 }
 
@@ -38,7 +68,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* overflow: hidden; */
+  overflow: auto;
   /* background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706); */
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
@@ -298,8 +328,8 @@ label:hover{
   .fa-wallet{
   position: absolute;
   font-size: 40px;
-  top: 10px;
-  right: 10px
+  top: 50px;
+  left: 1250px;
   }
   .fa-twitter, .fa-whatsapp, .fa-facebook{
     font-size: 50px;
