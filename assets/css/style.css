@@ -8,8 +8,13 @@
 
 @media (max-width: 425px) {
   .field-frame{
-    height: auto !important;
+    height: 615px !important;
   }
+  .embed-responsive-21by9{
+    height: 600px;
+    width: auto;
+  }
+
   .progress-bar-edit .step .bullet:after{
   position: absolute;
   content: '';
